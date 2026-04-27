@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yash Sharma — AIML Engineer specializing in NLP and production ML systems.">
-  <meta property="og:title" content="Yash Sharma · AIML Engineer">
+  <meta name="description" content="Yash Sharma — AI/ML Engineer specializing in NLP and production ML systems.">
+  <meta property="og:title" content="Yash Sharma · AI/ML Engineer">
   <meta property="og:description" content="Building production-grade machine learning systems. 93%+ F1-score. &lt;15ms inference.">
-  <title>Yash Sharma — AIML Engineer</title>
+  <title>Yash Sharma — AI/ML Engineer</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -840,6 +840,20 @@
       color: var(--gold);
     }
     
+    /* Project Links Container */
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-link[title*="Code"] {
+      color: var(--gold-muted);
+    }
+    
+    .project-link[title*="Demo"] {
+      color: var(--text-2);
+    }
+    
     .project-number {
       position: absolute;
       bottom: 2rem;
@@ -1645,7 +1659,7 @@
           </div>
           
           <div class="about-bio">
-            <p>I'm an early-career AIML Engineer who builds systems that actually run in production. Not prototypes that impress in demos — real services with latency SLAs, test coverage, CI/CD pipelines, and monitoring dashboards.</p>
+            <p>I'm an early-career AI/ML Engineer who builds systems that actually run in production. Not prototypes that impress in demos — real services with latency SLAs, test coverage, CI/CD pipelines, and monitoring dashboards.</p>
             <p>At Celebal Technologies I owned the entire NLP pipeline end-to-end — raw data through feature engineering, model training and evaluation, FastAPI deployment, CI/CD automation, and Streamlit observability. That's the standard I hold every project to.</p>
             <p>Currently pursuing my MCA while actively building AI-native applications. I specialize at the intersection of rigorous ML engineering and production software craftsmanship — the gap most data scientists leave unfilled.</p>
           </div>
@@ -1713,9 +1727,7 @@
           </div>
           <div class="exp-content">
             <h3>Data Science Intern</h3>
-            <ul class="exp-bullets">
-              <li><span class="highlight">93%+ F1-score</span> across 7 classes; served in real time via FastAPI at <span class="highlight">15ms latency</span> — production standards from day one.</li>
-              
+            <ul class="exp-bullets">              
               <li>Built LDA topic modelling across <span class="highlight">50,000+ records</span> paired with a Streamlit observability dashboard — collectively reducing manual triage effort by <span class="highlight">40%</span>.</li>
               <li>Delivered ownership across the full ML stack — raw data, features, model evaluation, REST API, CI pipeline, and monitoring.</li>
             </ul>
@@ -1773,10 +1785,13 @@
       </div>
       
       <div class="projects-grid">
+        <!-- Project 1: Customer Inquiry Classifier -->
         <div class="project-card reveal">
           <div class="project-header">
             <span class="project-label">Project 01</span>
-            <a href="https://github.com/Yashsh101" target="_blank" class="project-link">↗ View on GitHub</a>
+            <div class="project-links">
+              <a href="https://github.com/Yashsh101/customer-inquiry-classifier" target="_blank" class="project-link" title="View Code">↗ View Code</a>
+            </div>
           </div>
           <div class="project-number">01</div>
           <h3 class="project-title">Customer Inquiry Classifier</h3>
@@ -1788,7 +1803,7 @@
             </div>
             <div class="project-metric">
               <div class="project-metric-number">15ms</div>
-              <div class="project-metric-label">Inference</div>
+              <div class="project-metric-label">Latency</div>
             </div>
             <div class="project-metric">
               <div class="project-metric-number">7</div>
@@ -1805,10 +1820,13 @@
           </div>
         </div>
         
+        <!-- Project 2: AI Trip Planner -->
         <div class="project-card reveal">
           <div class="project-header">
             <span class="project-label">Project 02</span>
-            <a href="https://github.com/Yashsh101" target="_blank" class="project-link">↗ View on GitHub</a>
+            <div class="project-links">
+              <a href="https://github.com/Yashsh101/AI-trip-planner-api" target="_blank" class="project-link" title="View Code">↗ View Code</a>
+            </div>
           </div>
           <div class="project-number">02</div>
           <h3 class="project-title">AI Trip Planner</h3>
@@ -1816,7 +1834,7 @@
           <div class="project-metrics">
             <div class="project-metric">
               <div class="project-metric-number">Gemini</div>
-              <div class="project-metric-label">Model</div>
+              <div class="project-metric-label">API</div>
             </div>
             <div class="project-metric">
               <div class="project-metric-number">Live</div>
@@ -1836,41 +1854,47 @@
           </div>
         </div>
         
+        <!-- Project 3: DocuMind AI Copilot -->
         <div class="project-card reveal">
           <div class="project-header">
             <span class="project-label">Project 03</span>
-            <a href="https://github.com/Yashsh101" target="_blank" class="project-link">↗ View on GitHub</a>
+            <div class="project-links">
+              <a href="https://github.com/Yashsh101/documind-ai-copilot" target="_blank" class="project-link" title="View Code">↗ View Code</a>
+            </div>
           </div>
           <div class="project-number">03</div>
-          <h3 class="project-title">House Price Predictor</h3>
-          <p class="project-desc">Stacked ensemble regression with SHAP-based explainability, full test suite, and production-ready deployment. Rigorous feature engineering and cross-validation for robust real-world performance.</p>
+          <h3 class="project-title">DocuMind AI Copilot</h3>
+          <p class="project-desc">AI-powered document copilot — upload documents and chat with them via an LLM-powered RAG pipeline. Supports multi-doc querying with context-aware responses.</p>
           <div class="project-metrics">
             <div class="project-metric">
-              <div class="project-metric-number">R² 0.93</div>
-              <div class="project-metric-label">Score</div>
+              <div class="project-metric-number">RAG</div>
+              <div class="project-metric-label">Architecture</div>
             </div>
             <div class="project-metric">
-              <div class="project-metric-number">SHAP</div>
-              <div class="project-metric-label">Explainability</div>
+              <div class="project-metric-number">LLM</div>
+              <div class="project-metric-label">Powered</div>
             </div>
             <div class="project-metric">
-              <div class="project-metric-number">Stacked</div>
-              <div class="project-metric-label">Ensemble</div>
+              <div class="project-metric-number">Multi-Doc</div>
+              <div class="project-metric-label">Support</div>
             </div>
           </div>
           <div class="project-stack">
             <span class="stack-tag">Python</span>
-            <span class="stack-tag">XGBoost</span>
-            <span class="stack-tag">Scikit-learn</span>
-            <span class="stack-tag">SHAP</span>
+            <span class="stack-tag">LangChain</span>
             <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">OpenAI</span>
+            <span class="stack-tag">Vector DB</span>
           </div>
         </div>
         
+        <!-- Project 4: Adaptive Diagnostic Engine -->
         <div class="project-card reveal">
           <div class="project-header">
             <span class="project-label">Project 04</span>
-            <a href="https://github.com/Yashsh101" target="_blank" class="project-link">↗ View on GitHub</a>
+            <div class="project-links">
+              <a href="https://github.com/Yashsh101/IT-Agent" target="_blank" class="project-link" title="View Code">↗ View Code</a>
+            </div>
           </div>
           <div class="project-number">04</div>
           <h3 class="project-title">Adaptive Diagnostic Engine</h3>
@@ -2022,7 +2046,7 @@
         
         <div class="achievement-card reveal">
           <div class="achievement-icon">◈ PROGRAM ◈</div>
-          <h3 class="achievement-title">Prime AIML Batch — Apna College</h3>
+          <h3 class="achievement-title">Prime AI/ML Batch — Apna College</h3>
           <p class="achievement-desc">Intensive program Python, ML, Deep Learning, GenAI, AI Engineering Stack. Practical, project-driven curriculum delivering real-world model deployment skills.</p>
         </div>
         
@@ -2098,7 +2122,7 @@
             <div class="edu-date">Aug 2024 — Present</div>
             <h3 class="edu-degree">Master of Computer Application</h3>
             <div class="edu-institution">Poddar Management & Technical Campus, Jaipur</div>
-            <div class="edu-note">Specialising in AIML systems and production software engineering</div>
+            <div class="edu-note">Specialising in AI/ML systems and production software engineering</div>
           </div>
           
           <div class="edu-item">
@@ -2113,7 +2137,7 @@
           <h3>Certifications & Programs</h3>
           
           <div class="cert-item">
-            <div class="cert-name">Prime AIML Batch</div>
+            <div class="cert-name">Prime AI/ML Batch</div>
             <div class="cert-provider">Apna College</div>
             <div class="cert-details">Python, ML, Deep Learning, GenAI, AI Engineering Stack</div>
           </div>
@@ -2146,7 +2170,7 @@
             </h2>
           </div>
           
-          <p class="contact-lead">I'm actively seeking AIML engineering roles, internships, and contract work — particularly in NLP, production ML systems, and LLM-powered applications. Open to remote positions globally.</p>
+          <p class="contact-lead">I'm actively seeking AI/ML engineering roles, internships, and contract work — particularly in NLP, production ML systems, and LLM-powered applications. Open to remote positions globally.</p>
           <p class="contact-lead">If you're building something worth building, I'd like to talk.</p>
           
           <a href="mailto:syash2297@gmail.com" class="contact-cta">Send a Message →</a>
@@ -2156,11 +2180,6 @@
           <a href="mailto:syash2297@gmail.com" class="contact-link">
             <span class="contact-label">Email</span>
             <span class="contact-value">syash2297@gmail.com</span>
-            <span class="contact-arrow">↗</span>
-          </a>
-          <a href="tel:+919461572488" class="contact-link">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">+91 9461572488</span>
             <span class="contact-arrow">↗</span>
           </a>
           <a href="https://www.linkedin.com/in/yash-sharma-262923183" target="_blank" class="contact-link">
@@ -2399,6 +2418,110 @@
       }, { threshold: 0.4 });
       observer.observe(contactTitle);
     })();
+  </script>
+  
+  <!-- Dynamic Projects Data & Rendering -->
+  <script>
+    // ============================================
+    // STRUCTURED PROJECT DATA
+    // Each project has its own GitHub repo URL
+    // ============================================
+    const projectsData = [
+      {
+        id: 1,
+        title: "Customer Inquiry Classifier",
+        description: "Production NLP pipeline classifying support tickets into 7 categories. Real-time inference served via FastAPI. Full CI/CD, automated testing, and Streamlit observability dashboard. Built to enterprise standards.",
+        metrics: [
+          { value: "93%+", label: "F1 Score" },
+          { value: "15ms", label: "Inference" },
+          { value: "7", label: "Classes" }
+        ],
+        stack: ["Python", "Scikit-learn", "FastAPI", "Docker", "CI/CD", "Streamlit"],
+        githubUrl: "https://github.com/Yashsh101/customer-inquiry-classifier",
+        liveUrl: null,
+        featured: true
+      },
+      {
+        id: 2,
+        title: "AI Trip Planner",
+        description: "GenAI itinerary platform built at Google Gen AI Exchange Hackathon 2025. Multi-step prompt orchestration, real-time data fusion, and streaming for a low-latency interactive planning experience.",
+        metrics: [
+          { value: "Gemini", label: "Model" },
+          { value: "Live", label: "Streaming" },
+          { value: "Winner", label: "Hackathon" }
+        ],
+        stack: ["Gemini", "Vertex AI", "Node.js", "React", "Prompt Engineering"],
+        githubUrl: "https://github.com/Yashsh101/AI-trip-planner-api",
+        liveUrl: null,
+        featured: true
+      },
+      {
+        id: 3,
+        title: "DocuMind AI Copilot",
+        description: "AI-powered document copilot — upload documents and chat with them via an LLM-powered RAG pipeline. Supports multi-doc querying with context-aware responses.",
+        metrics: [
+          { value: "RAG", label: "Architecture" },
+          { value: "LLM", label: "Powered" },
+          { value: "Multi-Doc", label: "Support" }
+        ],
+        stack: ["Python", "LangChain", "FastAPI", "OpenAI", "Vector DB"],
+        githubUrl: "https://github.com/Yashsh101/documind-ai-copilot",
+        liveUrl: null,
+        featured: true
+      },
+      {
+        id: 4,
+        title: "Adaptive Diagnostic Engine",
+        description: "LLM-powered IT support automation agent with adaptive questioning, context memory, and multi-step resolution flows. Browser-based agentic architecture for real-world diagnostic workflows.",
+        metrics: [
+          { value: "Agentic", label: "Architecture" },
+          { value: "LLM", label: "Powered" },
+          { value: "Browser", label: "Use" }
+        ],
+        stack: ["Flask", "FastAPI", "LLM", "Browser-Use", "Python"],
+        githubUrl: "https://github.com/Yashsh101/IT-Agent",
+        liveUrl: null,
+        featured: true
+      }
+    ];
+
+    // ============================================
+    // DYNAMIC PROJECT RENDERING
+    // Renders projects from data structure
+    // ============================================
+    function renderProjects() {
+      const container = document.getElementById('projects-container');
+      if (!container) return;
+
+      container.innerHTML = projectsData.map((project, index) => `
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-label">Project ${String(index + 1).padStart(2, '0')}</span>
+            <div class="project-links">
+              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="project-link" title="View Code">↗ View Code</a>` : ''}
+              ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="project-link" title="Live Demo">● Live Demo</a>` : ''}
+            </div>
+          </div>
+          <div class="project-number">${String(index + 1).padStart(2, '0')}</div>
+          <h3 class="project-title">${project.title}</h3>
+          <p class="project-desc">${project.description}</p>
+          <div class="project-metrics">
+            ${project.metrics.map(m => `
+              <div class="project-metric">
+                <div class="project-metric-number">${m.value}</div>
+                <div class="project-metric-label">${m.label}</div>
+              </div>
+            `).join('')}
+          </div>
+          <div class="project-stack">
+            ${project.stack.map(tech => `<span class="stack-tag">${tech}</span>`).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Initialize projects on DOM ready
+    document.addEventListener('DOMContentLoaded', renderProjects);
   </script>
 </body>
 </html>
