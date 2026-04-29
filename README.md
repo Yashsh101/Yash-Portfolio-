@@ -13,7 +13,7 @@
 
 ### AI / ML Engineer · NLP & Production Systems
 
-[![Live Portfolio](https://img.shields.io/badge/LIVE%20PORTFOLIO-Visit%20Now-c9a84b?style=for-the-badge&logo=vercel&logoColor=black)](https://yash-portfolio-kappa-three.vercel.app)
+[![Portfolio](https://img.shields.io/badge/PORTFOLIO-View%20Live-c9a84b?style=for-the-badge&logo=vercel&logoColor=black)](https://yashsharma01.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-Yashsh101-c9a84b?style=for-the-badge&logo=github&logoColor=black)](https://github.com/Yashsh101)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-c9a84b?style=for-the-badge&logo=linkedin&logoColor=black)](https://www.linkedin.com/in/yash-sharma-262923183)
 [![Email](https://img.shields.io/badge/Email-Hire%20Me-c9a84b?style=for-the-badge&logo=gmail&logoColor=black)](mailto:syash2297@gmail.com)
@@ -152,7 +152,6 @@ Border       #1a1916   Subtle separators
 | Channel | Details |
 |---------|---------|
 | Email | [syash2297@gmail.com](mailto:syash2297@gmail.com) |
-| Phone | +91 9461572488 |
 | LinkedIn | [yash-sharma-262923183](https://www.linkedin.com/in/yash-sharma-262923183) |
 | GitHub | [Yashsh101](https://github.com/Yashsh101) |
 | Location | Jaipur, Rajasthan, India · Remote |
