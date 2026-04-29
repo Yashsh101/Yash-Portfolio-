@@ -926,7 +926,7 @@
     
     /* Skills Section */
     #skills {
-      background: var(--surface-1);
+      background: radial-gradient(ellipse at 50% 45%, rgba(201,168,75,0.055) 0%, transparent 42%), var(--surface-1);
     }
     
     .skills-grid {
@@ -948,7 +948,7 @@
     .skill-item {
       padding: 8px 0 8px 12px;
       border-left: 2px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
       font-family: var(--font-body);
       font-size: 13px;
       color: var(--text-2);
@@ -957,40 +957,58 @@
     
     .skill-item:hover {
       border-left-color: var(--gold);
+      color: var(--text-1);
+      transform: translateX(4px);
     }
     
     .skill-bars {
-      margin-top: 3rem;
-      max-width: 600px;
+      width: min(760px, 100%);
+      margin: 4rem auto 0;
+      padding: 2rem;
+      border: 1px solid var(--border-1);
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(201,168,75,0.035));
+      box-shadow: 0 24px 70px rgba(0,0,0,0.28), 0 0 45px rgba(201,168,75,0.055);
     }
     
     .skill-bar-item {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.6rem;
+    }
+    
+    .skill-bar-item:last-child {
+      margin-bottom: 0;
     }
     
     .skill-bar-header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 0.5rem;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.65rem;
     }
     
     .skill-bar-name {
       font-family: var(--font-mono);
       font-size: 10px;
-      color: var(--text-2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-1);
     }
     
     .skill-bar-percent {
       font-family: var(--font-mono);
       font-size: 10px;
-      color: var(--gold);
+      color: var(--gold-bright);
     }
     
     .skill-bar-track {
-      height: 2px;
-      background: var(--surface-3);
+      height: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(0,0,0,0.28));
+      border: 1px solid rgba(201,168,75,0.12);
+      border-radius: 999px;
       position: relative;
       overflow: hidden;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.55);
     }
     
     .skill-bar-fill {
@@ -998,9 +1016,21 @@
       left: 0;
       top: 0;
       height: 100%;
-      background: var(--gold);
       width: 0;
-      transition: width 1s ease-out;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--gold-muted), var(--gold), var(--gold-bright));
+      box-shadow: 0 0 16px rgba(201,168,75,0.45), 0 0 34px rgba(232,208,138,0.22);
+      transition: width 1.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .skill-bar-fill::after {
+      content: '';
+      position: absolute;
+      inset: 1px 8px auto 8px;
+      height: 3px;
+      border-radius: inherit;
+      background: rgba(255,255,255,0.35);
+      opacity: 0.55;
     }
     
     /* Achievements Section */
@@ -1506,6 +1536,13 @@
         grid-template-columns: 1fr;
       }
       
+      .skill-bars {
+        width: 100%;
+        margin-top: 3rem;
+        padding: 1.35rem;
+        border-radius: 14px;
+      }
+      
       .exp-item {
         grid-template-columns: 1fr;
       }
@@ -1979,7 +2016,7 @@
             <span class="skill-bar-percent">95%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="95"></div>
+            <div class="skill-bar-fill" data-width="95%"></div>
           </div>
         </div>
         <div class="skill-bar-item">
@@ -1988,7 +2025,7 @@
             <span class="skill-bar-percent">88%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="88"></div>
+            <div class="skill-bar-fill" data-width="88%"></div>
           </div>
         </div>
         <div class="skill-bar-item">
@@ -1997,7 +2034,7 @@
             <span class="skill-bar-percent">80%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="80"></div>
+            <div class="skill-bar-fill" data-width="80%"></div>
           </div>
         </div>
         <div class="skill-bar-item">
@@ -2006,7 +2043,7 @@
             <span class="skill-bar-percent">76%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="76"></div>
+            <div class="skill-bar-fill" data-width="76%"></div>
           </div>
         </div>
         <div class="skill-bar-item">
@@ -2015,7 +2052,7 @@
             <span class="skill-bar-percent">72%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="72"></div>
+            <div class="skill-bar-fill" data-width="72%"></div>
           </div>
         </div>
         <div class="skill-bar-item">
@@ -2024,7 +2061,7 @@
             <span class="skill-bar-percent">60%</span>
           </div>
           <div class="skill-bar-track">
-            <div class="skill-bar-fill" data-width="60"></div>
+            <div class="skill-bar-fill" data-width="60%"></div>
           </div>
         </div>
       </div>
@@ -2368,23 +2405,29 @@
     
     // Skill bars animation
     const skillBars = document.querySelectorAll('.skill-bar-fill');
-    let barsAnimated = false;
+    const skillBarsWrap = document.querySelector('.skill-bars');
     
-    const barObserver = new IntersectionObserver((entries) => {
+    const animateSkillBars = () => {
+      skillBars.forEach((bar, index) => {
+        const width = bar.dataset.width || '0%';
+        setTimeout(() => {
+          bar.style.width = width;
+        }, index * 110);
+      });
+    };
+    
+    const barObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !barsAnimated) {
-          barsAnimated = true;
-          skillBars.forEach(bar => {
-            const width = bar.dataset.width;
-            setTimeout(() => {
-              bar.style.width = width + '%';
-            }, 200);
-          });
+        if (entry.isIntersecting) {
+          animateSkillBars();
+          observer.disconnect();
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.35 });
     
-    skillBars.forEach(bar => barObserver.observe(bar));
+    if (skillBarsWrap) {
+      barObserver.observe(skillBarsWrap);
+    }
     
     // Hide cursor on mobile
     if (window.innerWidth <= 768) {
@@ -2525,6 +2568,5 @@
   </script>
 </body>
 </html>
-
 
 
